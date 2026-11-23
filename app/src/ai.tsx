@@ -7,7 +7,6 @@ async function generateAiText(): Promise<string> {
       model: config.gemini_model,
       maxOutputTokens: config.gemini_tokens,
       maxRetries: config.gemini_retries,
-      temperature: config.gemini_temp,
       prompt: config.gemini_prompt,
       experimental_transform: smoothStream({
         delayInMs: config.gemini_delay,
