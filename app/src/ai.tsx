@@ -5,8 +5,6 @@ async function generateAiText(): Promise<string> {
   try {
     const { text } = streamText({
       model: config.gemini_model,
-      maxOutputTokens: config.gemini_tokens,
-      maxRetries: config.gemini_retries,
       prompt: config.gemini_prompt,
       experimental_transform: smoothStream({
         delayInMs: config.gemini_delay,
